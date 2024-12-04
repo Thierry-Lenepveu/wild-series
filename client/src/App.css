@@ -14,9 +14,6 @@ body {
 
 #root {
   height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 1fr;
@@ -142,4 +139,39 @@ footer {
       #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
     color: #fff;
   }
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625rem;
+  align-items: stretch;
+}
+
+section > figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border: #111 3px solid;
+  border-radius: 0.625rem;
+  gap: 0.625rem;
+}
+
+section > figure > img {
+  max-width: 180px;
+  height: auto;
+  box-sizing: content-box;
+  padding: 0.625rem;
+}
+
+section > figure > figcaption {
+  color: #111;
+}
+
+section > figure > p {
+  color: #111;
+  padding: 0.625rem;
+  max-width: 360px;
 }
