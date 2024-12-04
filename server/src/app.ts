@@ -88,6 +88,10 @@ if (fs.existsSync(publicFolderPath)) {
 
 // Serve client resources
 
+app.get("/", (_, res) => {
+  res.status(200).send("Welcome to Wild Series !");
+});
+
 const clientBuildPath = path.join(__dirname, "../../client/dist");
 
 if (fs.existsSync(clientBuildPath)) {
