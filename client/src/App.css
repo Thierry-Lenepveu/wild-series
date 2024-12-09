@@ -8,7 +8,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  color: #eee;
+  color: #111;
   margin: 0;
 }
 
@@ -16,7 +16,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto 1fr auto;
   align-content: start;
   padding: 1rem;
 }
@@ -44,7 +44,7 @@ header {
 
 .navbar a {
   text-decoration: none;
-  color: #eee;
+  color: #111;
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -56,7 +56,7 @@ header {
 
 .text-box {
   grid-column: 1 / -1;
-  grid-row: 1;
+  grid-row: 2;
   align-self: center;
   text-align: center;
 }
@@ -101,12 +101,12 @@ header {
 
 .btn-white {
   background-color: #fff;
-  color: #777;
+  color: #111;
 }
 
 footer {
   grid-column: -2 / -1;
-  grid-row: 1;
+  grid-row: 3;
   align-self: end;
   text-align: right;
 }
@@ -141,7 +141,7 @@ footer {
   }
 }
 
-section {
+section.programs {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -149,7 +149,7 @@ section {
   align-items: stretch;
 }
 
-section > figure {
+section.programs > figure {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -159,19 +159,96 @@ section > figure {
   gap: 0.625rem;
 }
 
-section > figure > img {
+section.programs > figure > img {
   max-width: 180px;
   height: auto;
   box-sizing: content-box;
   padding: 0.625rem;
 }
 
-section > figure > figcaption {
+section.programs > figure > figcaption {
   color: #111;
 }
 
-section > figure > p {
+section.programs > figure > p {
   color: #111;
   padding: 0.625rem;
   max-width: 360px;
+}
+
+section.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+section.categories > figure > figcaption {
+  color: #eee;
+  background-color: #970dc5;
+  border-radius: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+section.category-new > form > button {
+  color: #eee;
+  background-color: #970dc5;
+  border-radius: 1.25rem;
+  padding: 0.3375rem 1.25rem 0.3375rem 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+section.category-new > form > input {
+  padding: 0.3375rem;
+}
+
+section.category-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+section.category-details > div.link-container {
+  color: #eee;
+  background-color: #970dc5;
+  border-radius: 1.25rem;
+  padding: 0.3375rem 1.25rem 0.3375rem 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+}
+
+section.category-details > form > button {
+  color: #eee;
+  background-color: #970dc5;
+  border-radius: 1.25rem;
+  padding: 0.3375rem 1.25rem 0.3375rem 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+section.category-edit > form > button {
+  color: #eee;
+  background-color: #970dc5;
+  border-radius: 1.25rem;
+  padding: 0.3375rem 1.25rem 0.3375rem 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+section.category-edit > form > input {
+  padding: 0.3375rem;
 }

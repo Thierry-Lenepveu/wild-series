@@ -21,6 +21,13 @@ router.get("/api/programs/:id", programActions.read);
 
 router.get("/api/categories", categoryActions.browse);
 router.get("/api/categories/:id", categoryActions.read);
+router.put(
+  "/api/categories/:id",
+  categoryActions.validate,
+  categoryActions.edit,
+);
+router.delete("/api/categories/:id", categoryActions.destroy);
+router.post("/api/categories", categoryActions.validate, categoryActions.add);
 
 /* ************************************************************************* */
 

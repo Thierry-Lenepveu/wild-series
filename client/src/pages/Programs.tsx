@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-interface ProgramPros {
+interface ProgramProps {
   id: number;
   title: string;
   poster: string;
@@ -9,19 +9,19 @@ interface ProgramPros {
   year: number;
 }
 function Programs() {
-  const [programs, setPrograms] = useState<ProgramPros[]>(
-    Array<ProgramPros>(0),
+  const [programs, setPrograms] = useState<ProgramProps[]>(
+    Array<ProgramProps>(0),
   );
 
   useEffect(() => {
-    fetch("http://localhost:3310/api/programs")
+    fetch(`${import.meta.env.VITE_API_URL}/api/programs`)
       .then((response) => response.json())
       .then((dataReceived) => setPrograms(dataReceived));
   }, []);
 
   return (
     <>
-      <section>
+      <section className="programs">
         {programs.map((program) => {
           return (
             <figure key={program.id}>
